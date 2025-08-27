@@ -5,6 +5,7 @@ const SettingsModal = {
     'settings-debug-tab': SettingsDebugTab,
     'settings-parser-tab': SettingsParserTab,
     'settings-trackers-tab': SettingsTrackersTab,
+    'settings-naming-tab': SettingsNamingTab,
   },
   props: {
     series: { type: Array, required: true },
