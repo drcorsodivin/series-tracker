@@ -5,6 +5,7 @@ const SettingsModal = {
     'settings-debug-tab': SettingsDebugTab,
     'settings-parser-tab': SettingsParserTab,
     'settings-trackers-tab': SettingsTrackersTab,
+    'settings-naming-tab': SettingsNamingTab,
   },
   props: {
     series: { type: Array, required: true },
@@ -30,7 +31,11 @@ template: `
                                 <i class="bi bi-key me-2"></i>Авторизация
                             </button>
                         </li>
-                        
+                 <li class="nav-item" role="presentation">
+  <button class="nav-link modern-tab-link" id="naming-tab" data-bs-toggle="tab" data-bs-target="#naming-tab-pane" type="button" role="tab" @click="setActiveTab('naming')">
+    <i class="bi bi-type me-2"></i>Нейминг
+  </button>
+</li>       
                         <li class="nav-item" role="presentation">
                             <button class="nav-link modern-tab-link" 
                                     id="trackers-tab" data-bs-toggle="tab" data-bs-target="#trackers-tab-pane" 
@@ -76,7 +81,9 @@ template: `
                         <div class="tab-pane fade" id="trackers-tab-pane" role="tabpanel">
                            <settings-trackers-tab ref="trackersTab" @show-toast="emitToast"></settings-trackers-tab>
                         </div>
-                        
+                        <div class="tab-pane fade" id="naming-tab-pane" role="tabpanel">
+  <settings-naming-tab ref="namingTab" @show-toast="emitToast"></settings-naming-tab>
+</div>
                         <div class="tab-pane fade" id="parser-tab-pane" role="tabpanel">
                            <settings-parser-tab ref="parserTab" @show-toast="emitToast"></settings-parser-tab>
                         </div>

@@ -8,6 +8,9 @@ from .parser import profiles_bp, rules_bp
 # --- ИЗМЕНЕНИЕ: Импортируем новый чертеж ---
 from .media import media_bp
 from .trackers import trackers_bp
+from .naming import naming_bp   # импорт
+# ...
+app.register_blueprint(naming_bp)  # регистрация
 
 def init_all_routes(app):
     """
