@@ -12,7 +12,8 @@
         flex-direction: column;
         align-items: stretch;
     }
-    
+    .input-constructor-group { flex-direction: column; height: auto; }
+.input-constructor-group .constructor-item { width: 100%; }
     .modern-header .modal-title {
         width: 100%;
         text-align: center;
